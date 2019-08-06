@@ -5,8 +5,9 @@ from demoCOOKY.utils import util
 from demoCOOKY.pages.page_login import PageLogin
 from demoCOOKY.pages.page_header import PageHeader
 
+
 class TestLogin(unittest.TestCase):
-    #driver = ''
+    # driver = ''
     def setUp(self):
         appium_url = 'http://localhost:4723/wd/hub'
         desired_caps = {
@@ -19,7 +20,8 @@ class TestLogin(unittest.TestCase):
         }
         self.driver = webdriver.Remote(appium_url, desired_caps)
         self.driver.implicitly_wait(3)
-        permission_allow_btn_id = self.driver.find_element_by_id('com.android.packageinstaller:id/permission_allow_button')
+        permission_allow_btn_id = self.driver.find_element_by_id(
+            'com.android.packageinstaller:id/permission_allow_button')
         while True:
             try:
                 permission_allow_btn_id.click()
