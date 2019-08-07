@@ -3,5 +3,9 @@ def accept_permission(driver):
     permission_allow_btn_id.click()
 
 
-def hide_virtual_keyboar(driver):
+def hide_virtual_keyboard(driver):
     driver.hide_keyboard()
+
+
+def hide_virtual_keyboar():
+    return None

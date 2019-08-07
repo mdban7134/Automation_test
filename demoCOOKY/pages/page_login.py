@@ -2,10 +2,14 @@ class PageLogin():
 
     def __init__(self, driver):
         self.driver = driver
-        self.username_txt_id = 'editTextEmail'
-        self.password_txt_id = 'editTextPassword'
-        self.login_btn_id = 'btn_login'
-        self.error_message_id = 'android:id/message'
+        self.loginviaEmail_btn_id = 'rlLoginEmail'
+        self.username_txt_id = 'metEmailLogin'
+        self.password_txt_id = 'metPassLogin'
+        self.login_btn_id = 'tvLogin'
+        self.error_message_id = 'md_content'
+
+    def click_loginviaEmail(self):
+        self.driver.find_element_by_id(self.loginviaEmail_btn_id).click()
 
     def enter_username(self, username):
         self.driver.find_element_by_id(self.username_txt_id).send_keys(username)
