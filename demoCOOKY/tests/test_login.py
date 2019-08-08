@@ -3,6 +3,7 @@ import unittest
 import time
 
 # from demoCOOKY.utils import util
+from demoCOOKY.pages.page_account import PageAccount
 from demoCOOKY.pages.page_intro import PageIntro
 from demoCOOKY.pages.page_login import PageLogin
 from demoCOOKY.pages.page_home import PageHome
@@ -14,8 +15,9 @@ class TestLogin(unittest.TestCase):
         appium_url = 'http://localhost:4723/wd/hub'
         desired_caps = {
             'platformName': 'Android',
-            'platformVersion': '8.0.0',
-            'deviceName': '9885f74b4456424952',
+            'platformVersion': '9',
+            # 'deviceName': '9885f74b4456424952',
+            'deviceName': 'emulator-5554',
             'app': 'D:/PYTHON/APK/Cooky-3.5.apk',
             'appPackage': 'vn.cooky.cooky',
             'appActivity': 'vn.cooky.cooky.MVP.module.splash_screen.view.SplashScreen'
@@ -30,6 +32,23 @@ class TestLogin(unittest.TestCase):
         #     except:
         #         break
 
+    # def test_logout_successful(self):
+    #     page_intro = PageIntro(self.driver)
+    #     page_login = PageLogin(self.driver)
+    #     page_home = PageHome(self.driver)
+    #     page_account = PageAccount(self.driver)
+    #     page_intro.click_next()
+    #     page_intro.click_skip()
+    #     page_login.click_loginviaEmail()
+    #     page_login.enter_username('cooky')
+    #     page_login.enter_password('cooky123123')
+    #     # util.hide_virtual_keyboard(self.driver)
+    #     page_login.click_login()
+    #     time.sleep(3)
+    #     page_home.click_close_change_log()
+    #     page_account.open_tab_account()
+    #     page_account.click_sign_out()
+    #     page_account.click_ok_on_confirmation_popup()
 
     def test_login_successful(self):
         page_intro = PageIntro(self.driver)

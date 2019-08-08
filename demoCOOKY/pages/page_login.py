@@ -7,6 +7,7 @@ class PageLogin():
         self.password_txt_id = 'metPassLogin'
         self.login_btn_id = 'tvLogin'
         self.error_message_id = 'md_content'
+        self.loginlater_btn_id = 'tvSignInLater'
 
     def click_loginviaEmail(self):
         self.driver.find_element_by_id(self.loginviaEmail_btn_id).click()
@@ -22,3 +23,6 @@ class PageLogin():
 
     def get_error_message_of_login_fail(self):
         return self.driver.find_element_by_id(self.error_message_id).text
+
+    def click_login_later(self):
+        self.driver.find_element_by_id(self.loginlater_btn_id).click()
